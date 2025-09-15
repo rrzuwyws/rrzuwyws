@@ -41,18 +41,32 @@ h4::before {
   margin-right: 0.4rem;
 }
 
-section {
-  scroll-margin-top: 50vh;
-  scroll-margin-bottom: 50vh;
-}
-
 section[id] {
-  scroll-margin-top: 50vh;
+  scroll-margin-top: 15vh;
   outline: none;
 }
 
 section[id]:focus {
   outline: 2px dashed #007acc;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #007acc30;
+  font-size: 0.85rem;
+  line-height: 1rem;
+  padding: 0.2rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #00000030;
+  cursor: default;
+  user-select: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.subsection-title{
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    background-color: #11ff000f;
 }
 
 a,
