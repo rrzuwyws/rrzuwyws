@@ -6,7 +6,7 @@ html {
 
 body {
     color: #333745;
-    background-color:#fff8c3;
+    background-color:#fdf9da;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -69,9 +69,9 @@ section[id]:focus {
     background-color: #11ff000f;
 }
 
-a,
-a:link,
-a:visited {
+.a-link,
+.a-link:link,
+.a-link:visited {
     color: #427FED;
     text-decoration: underline dashed;
     text-decoration-thickness: .0625rem;
@@ -79,11 +79,11 @@ a:visited {
     text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
 }
 
-a:hover {
+.a-link:hover {
       text-decoration-color: color-mix(in srgb, currentColor 70%, transparent);
 }
 
-a:active {
+.a-link:active {
       text-decoration-color: color-mix(in srgb, currentColor 85%, transparent);
 }
 
@@ -122,6 +122,32 @@ a:active {
 .flex-wrap {
     display: flex;
     justify-content: space-between;
+}
+
+.cv-button-floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.cv-button,
+.cv-button:link
+.cv-button:visited {
+  background-color: #76A7FA;
+  padding: .8rem 1rem;
+
+  color: #eee;
+
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 .1rem .5rem rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.cv-button:hover,
+.cv-button:active {
+  background-color: #76A7FA;
+  box-shadow: 0 .1rem 1rem rgba(0,0,0,0.5);
 }
 
 /*helpers*/
@@ -199,5 +225,8 @@ a:active {
     .wrapper {
         margin-top: 3rem;
     }
-
+    .cv-button-floating {
+        position: sticky;
+        float: right;
+    }
 }
