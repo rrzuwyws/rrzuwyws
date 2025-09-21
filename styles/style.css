@@ -58,9 +58,7 @@ section[id]:focus {
   padding: 0.2rem 0.2rem;
   border-radius: 0.5rem;
   border: 1px solid #00000030;
-  cursor: default;
   user-select: none;
-  transition: background 0.2s, color 0.2s;
 }
 
 .subsection-title{
@@ -119,6 +117,11 @@ section[id]:focus {
     margin-top: 3rem;
 }
 
+.wrapper-right {
+    display: flex;
+    justify-content: right;
+}
+
 .flex-wrap {
     display: flex;
     justify-content: space-between;
@@ -146,8 +149,44 @@ section[id]:focus {
 
 .cv-button:hover,
 .cv-button:active {
-  background-color: #76A7FA;
+  background-color: #5593ff;
   box-shadow: 0 .1rem 1rem rgba(0,0,0,0.5);
+}
+
+.lang-switch {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+
+    background-color: #19fb0010;
+    color: #333745;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #19fb0098;
+    z-index: 1000;
+}
+
+.lang-switch a,
+.lang-switch a:link, 
+.lang-switch a:visited {
+    color: #333745;
+    text-decoration: none;
+    margin: 0 0.25rem;
+    padding: .6rem;
+    border-radius: 2px;
+    border-bottom: 3px solid transparent;
+}
+
+.lang-switch a:hover, 
+.lang-switch a:active {
+    color: #333745;
+    text-decoration: none;
+    margin: 0 0.25rem;
+    border-bottom-color: #007acc;
+    background: rgba(0, 122, 204, 0.1);
 }
 
 /*helpers*/
@@ -200,11 +239,27 @@ section[id]:focus {
   border-left-color: #007acc;
   background: rgba(0, 122, 204, 0.1);
 }
-@media (max-width:62.5rem) {
-    .toc{
+@media (max-width:63rem) {
+    .wrapper {
+        margin-top: 3rem;
+    }
+    .toc
+    {
         display: none;
     }
+    h1, .about-me {
+        margin-top: 0;
+    }
+    .cv-button-floating {
+        position: sticky;
+        float: right;
+    }
+    .lang-switch {
+        position: inherit;
+    }
 }
+
+
 @media (max-width:52rem) {
     html {
         margin: -1rem .125rem .375rem .125rem;
@@ -220,13 +275,5 @@ section[id]:focus {
 
     h3, h4 {
         font-size: 1rem;
-    }
-
-    .wrapper {
-        margin-top: 3rem;
-    }
-    .cv-button-floating {
-        position: sticky;
-        float: right;
     }
 }
