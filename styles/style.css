@@ -214,11 +214,11 @@ section[id]:focus {
 }
 
 /*helpers*/
-.margin-top-16{
+.margin-top-16 {
     margin-top: 1rem;
 }
 
-.margin-bottom-16{
+.margin-bottom-16 {
     margin-bottom: 1rem;
 }
 
@@ -280,6 +280,21 @@ section[id]:focus {
     }
     .lang-switch {
         position: inherit;
+        margin-bottom: 1rem;
+        padding: 0.125rem;
+        border-width: 1px;
+    }
+
+    .lang-switch a,
+    .lang-switch a:link,
+    .lang-switch a:visited {
+        padding: 0.125rem;
+        border-bottom: 2px solid transparent;
+    }
+
+    .lang-switch a:hover,
+    .lang-switch a:active {
+        border-bottom-color: #007acc;
     }
 }
 
@@ -299,6 +314,10 @@ section[id]:focus {
 
     h3, h4 {
         font-size: 1rem;
+    }
+
+    .lang-switch {
+        margin-bottom: 0;
     }
 }
 
